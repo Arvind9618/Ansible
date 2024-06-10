@@ -1,0 +1,17 @@
+---
+- hosts: slaves
+  become: yes
+  tasks:
+    - name: Install Java on Slave 1
+      when: inventory_hostname == "slave1"
+      apt:
+        name: default-jdk
+        state: present
+      tags: java
+
+    - name: Install MySQL Server on Slave 2
+      when: inventory_hostname == "slave2"
+      apt:
+        name: mysql-server
+        state: present
+      tags: mysql

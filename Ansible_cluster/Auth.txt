@@ -1,0 +1,11 @@
+create ssh-key in master node using "ssh-keygen -t rsa -b 2048
+"
+copy the .pub file using the following command from master node to slave nodes to establish connection.
+
+  "cat ~/.ssh/id_rsa.pub | ssh -I “keyname.pub” username@hostname 'cat >> ~/.ssh/authorized_keys' "
+
+or
+
+"ssh-copy-id root@192.168.1.11  # For slave1"
+"ssh-copy-id root@192.168.1.12  # For slave2"
+

@@ -1,0 +1,17 @@
+To set up an Ansible cluster with three nodes and perform the specified tasks, you need to write an 
+Ansible playbook and configure your inventory file. Below is a step-by-step guide to achieve this:
+
+Install Ansible on the control node: Ensure Ansible is installed on your control node (master node). 
+You can install Ansible using the following command:
+"sudo apt-get update"
+"sudo apt-get install ansible -y "
+
+for authentication of all nodes see "Auth" file
+
+Configure the inventory file: Create an inventory file that lists your nodes(see config.txt file for sytax). 
+This file typically resides at "/etc/ansible/hosts" or can be a separate file in your working directory.
+
+Playbook file to create ansible cluster is saved as "setup_cluster.yml"
+run the playbook using the following command
+" ansible-playbook -i inventory setup_cluster.yml "
+

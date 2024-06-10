@@ -1,0 +1,22 @@
+Create a directory structure for your Ansible project, including directories for roles.
+Use "ansible-galaxy" to create the roles for installing Apache2 and NGINX.
+Modify the tasks/main.yml files in each role to install the respective software.
+
+For the Apache role (roles/apache/tasks/main.yml)
+For the NGINX role (roles/nginx/tasks/main.yml)
+
+Define the inventory file listing your nodes. (save the file in .ini)
+Write the playbook to use these roles. Save this as "site.yml"
+
+Execute the playbook using the "ansible-playbook" command.
+
+For the project directory structure see the "directory structure" file.
+in project to see the directory tree use the following command
+" tree <rolename-role> "
+
+playbook contains the following commands:
+1. to install apache2/nginx
+2. start the service
+3. change the index file
+
+

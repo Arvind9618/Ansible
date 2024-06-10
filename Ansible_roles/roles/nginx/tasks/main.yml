@@ -1,0 +1,43 @@
+---
+- name: Install NGINX
+  apt:
+    name: nginx
+    state: present
+  become: yes
+
+- name: Ensure NGINX is running
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+  become: yes
+  
+- name: debug message before copying index file
+  debug:
+    msg: "Copying index.html on  {{ ansible_hostname }} at /var/www/html/index.html
+    
+- name: Install NGINX
+  apt:
+    name: nginx
+    state: present
+  become: yes
+
+- name: Ensure NGINX is running
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Deploy custom index.html
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    mode: '0644'
+  become: yes
+  
+  
+- name: debug message after copying index file
+  debug:
+    msg: "Copied index.html on  {{ ansible_hostname }} at /var/www/html/index.html
+    

@@ -1,0 +1,12 @@
+/* create an directory for roles creation and navigate to the dir
+*/
+mkdir -p ansible-project/roles
+cd ansible-project
+
+/* inside the directory add create the roles by the following command */
+ansible-galaxy init roles/apache
+ansible-galaxy init roles/nginx
+
+/* run the playbook */
+ansible-playbook -i inventory.ini site.yml
+

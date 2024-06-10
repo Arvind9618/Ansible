@@ -1,0 +1,26 @@
+ansible-project/
+├── inventory.ini
+├── roles/
+│   ├── apache/
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   ├── handlers/
+│   │   ├── files/
+│   │   │   └── index.html
+│   │   ├── templates/
+│   │   ├── meta/
+│   │   ├── defaults/
+│   │   ├── vars/
+│   │   └── tests/
+│   └── nginx/
+│       ├── tasks/
+│       │   └── main.yml
+│       ├── handlers/
+│       ├── files/
+│       │   └── index.html
+│       ├── templates/
+│       ├── meta/
+│       ├── defaults/
+│       ├── vars/
+│       └── tests/
+└── site.yml

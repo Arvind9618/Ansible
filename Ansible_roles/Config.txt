@@ -1,0 +1,6 @@
+Generate an SSH key pair on the control node (if not already done):
+" ssh-keygen -t rsa -b 2048 "
+
+Copy the public key to each node:
+" ssh-copy-id root@<slave1_ip> "
+" ssh-copy-id root@<slave2_ip> "
